@@ -26,8 +26,8 @@ pub enum Architecture {
 }
 
 impl Architecture {
-    const I686_STR: &str = "i686";
-    const X86_64_STR: &str = "x86_64";
+    const I686_STR: &'static str = "i686";
+    const X86_64_STR: &'static str = "x86_64";
 
     /// Parse architecture.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {
@@ -75,9 +75,9 @@ pub enum Channel {
 }
 
 impl Channel {
-    const BETA_STR: &str = "beta";
-    const NIGHTLY_STR: &str = "nightly";
-    const STABLE_STR: &str = "stable";
+    const BETA_STR: &'static str = "beta";
+    const NIGHTLY_STR: &'static str = "nightly";
+    const STABLE_STR: &'static str = "stable";
 
     /// Parse channel.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {
@@ -286,9 +286,9 @@ pub enum LinuxAbi {
 }
 
 impl LinuxAbi {
-    const GNUX32_STR: &str = "gnux32";
-    const GNU_STR: &str = "gnu";
-    const MUSL_STR: &str = "musl";
+    const GNUX32_STR: &'static str = "gnux32";
+    const GNU_STR: &'static str = "gnu";
+    const MUSL_STR: &'static str = "musl";
 
     /// Parse ABI.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {
@@ -332,9 +332,9 @@ pub enum System {
 }
 
 impl System {
-    const DARWIN_STR: &str = "darwin";
-    const LINUX_STR: &str = "linux";
-    const WINDOWS_STR: &str = "windows";
+    const DARWIN_STR: &'static str = "darwin";
+    const LINUX_STR: &'static str = "linux";
+    const WINDOWS_STR: &'static str = "windows";
 
     /// Parse system.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {
@@ -463,9 +463,9 @@ pub enum Vendor {
 }
 
 impl Vendor {
-    const APPLE_STR: &str = "apple";
-    const PC_STR: &str = "pc";
-    const UNKNOWN_STR: &str = "unknown";
+    const APPLE_STR: &'static str = "apple";
+    const PC_STR: &'static str = "pc";
+    const UNKNOWN_STR: &'static str = "unknown";
 
     /// Parse vendor.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {
@@ -510,9 +510,9 @@ pub enum WindowsAbi {
 }
 
 impl WindowsAbi {
-    const GNULLVM_STR: &str = "gnullvm";
-    const GNU_STR: &str = "gnu";
-    const MSVC_STR: &str = "msvc";
+    const GNULLVM_STR: &'static str = "gnullvm";
+    const GNU_STR: &'static str = "gnu";
+    const MSVC_STR: &'static str = "msvc";
 
     /// Parse ABI.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {

@@ -26,8 +26,8 @@ pub enum Profile {
 }
 
 impl Profile {
-    const DEBUG_STR: &str = "debug";
-    const RELEASE_STR: &str = "release";
+    const DEBUG_STR: &'static str = "debug";
+    const RELEASE_STR: &'static str = "release";
 
     /// Parse profile.
     fn nom_parse(input: &str) -> IResult<&str, Self, VerboseError<&str>> {
