@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added tests with MSRV toolchain in Rust workflow.
 
+### Changed
+
+- Replaced branch checks state with workflow status for branch.
+
 ### Fixed
 
 - Fixed coverage job in Rust workflow.
