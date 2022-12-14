@@ -3,7 +3,7 @@ name = "chksum-build"
 version = "0.0.0"
 authors = ["Konrad Goławski <konrad@golawski.it>"]
 edition = "2021"
-rust-version = "1.56.0"
+rust-version = "1.58.0"
 description = "Tiny library for setting/getting build-time values for your crate."
 readme = "README.md"
 repository = "https://github.com/ferric-bytes/chksum-build"
@@ -13,7 +13,6 @@ categories = ["development-tools::build-utils"]
 
 [profile.release]
 lto = "thin"
-strip = "symbols"
 
 [package.metadata.docs.rs]
 all-features = true
