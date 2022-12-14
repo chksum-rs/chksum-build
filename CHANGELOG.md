@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fixed coverage job in Rust workflow
+- Fixed coverage job in Rust workflow.
 - Fixed lifetimes for constant `str`s.
 - Fixed MSRV to `1.58.0`.
 
