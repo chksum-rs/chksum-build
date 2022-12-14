@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed coverage job in Rust workflow
 - Fixed lifetimes for constant `str`s.
 
+### Removed
+
+- Removed `strip` option for release profile.
+
 ## [0.0.0] - 2022-11-27
 
 ### Added

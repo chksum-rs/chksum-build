@@ -13,7 +13,6 @@ categories = ["development-tools::build-utils"]
 
 [profile.release]
 lto = "thin"
-strip = "symbols"
 
 [package.metadata.docs.rs]
 all-features = true
