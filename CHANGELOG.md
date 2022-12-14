@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed coverage job in Rust workflow.
 - Fixed lifetimes for constant `str`s.
 - Fixed MSRV to `1.58.0`.
+- Fixed Cargo build script commands (misspelled `rustup` instead of `rustc`).
 
 ### Removed
 
