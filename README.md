@@ -46,7 +46,7 @@ You can update `Cargo.toml` on your own.
 ```toml
 [build-dependencies]
 # ...
-chksum-build = "0.0.0"
+chksum-build = "0.0.1"
 ```
 
 Or use [`cargo add`](https://doc.rust-lang.org/cargo/commands/cargo-add.html) subcommand.
@@ -62,7 +62,7 @@ As in the example above you can add entry manually.
 ```toml
 [dependencies]
 # ...
-chksum-build = "0.0.0"
+chksum-build = "0.0.1"
 ```
 
 Or by using subcommand.
