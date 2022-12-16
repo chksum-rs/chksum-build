@@ -166,6 +166,7 @@
 //! MIT
 
 #![cfg_attr(docsrs, feature(doc_cfg))]
+#![cfg_attr(tarpaulin, feature(no_coverage))]
 #![forbid(unsafe_code)]
 
 #[cfg_attr(docsrs, doc(hidden))]
@@ -174,6 +175,7 @@ mod cargo;
 pub mod error;
 #[cfg(feature = "info")]
 #[cfg_attr(docsrs, doc(cfg(feature = "info")))]
+#[cfg_attr(tarpaulin, no_coverage)]
 mod info;
 #[cfg_attr(docsrs, doc(hidden))]
 mod rust;
