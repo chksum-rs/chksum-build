@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Disabled code coverage for internal `info` module.
 
+### Fixed
+
+- Replaced status badge (check [badges/shields#8671](https://github.com/badges/shields/issues/8671) for more informations).
+
 ## [0.0.1] - 2022-12-14
 
 ### Added
