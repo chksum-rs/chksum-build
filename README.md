@@ -1,9 +1,9 @@
 # chksum-build
 
-![Build](https://img.shields.io/github/actions/workflow/status/ferric-bytes/chksum-build/rust.yml?branch=master&style=flat-square "Build")
-[![Coverage](https://img.shields.io/codecov/c/gh/ferric-bytes/chksum-build?style=flat-square "Coverage")](https://app.codecov.io/gh/ferric-bytes/chksum-build)
-[![crates.io](https://img.shields.io/crates/v/chksum-build?style=flat-square "crates.io")](https://crates.io/crates/chksum-build)
-[![docs.rs](https://img.shields.io/docsrs/chksum-build?style=flat-square "docs.rs")](https://docs.rs/chksum-build)
+![Build](https://img.shields.io/github/actions/workflow/status/ferric-bytes/chksum-build/rust.yml?branch=master&style=flat-square&logo=github "Build")
+[![Coverage](https://img.shields.io/codecov/c/gh/ferric-bytes/chksum-build?style=flat-square&logo=codecov "Coverage")](https://app.codecov.io/gh/ferric-bytes/chksum-build)
+[![crates.io](https://img.shields.io/crates/v/chksum-build?style=flat-square&logo=rust "crates.io")](https://crates.io/crates/chksum-build)
+[![docs.rs](https://img.shields.io/docsrs/chksum-build?style=flat-square&logo=docsdotrs "docs.rs")](https://docs.rs/chksum-build)
 [![LICENSE](https://img.shields.io/github/license/ferric-bytes/chksum-build?style=flat-square "LICENSE")](https://github.com/ferric-bytes/chksum-build/blob/master/LICENSE)
 
 Tiny library for setting/getting build-time values for your crate.
