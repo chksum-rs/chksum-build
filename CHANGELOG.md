@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Disabled code coverage for internal `info` module.
+- Changed comments in TOML code examples.
 
 ### Fixed
 
