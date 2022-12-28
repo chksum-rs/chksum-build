@@ -27,7 +27,7 @@
 //!
 //! ## Update `Cargo.toml`
 //!
-//! ### Add `package.build` entry
+//! ### Modify `package` section
 //!
 //! ```toml
 //! [package]
@@ -35,7 +35,7 @@
 //! build = "build.rs"
 //! ```
 //!
-//! ### Add `build-dependencies` entry
+//! ### Modify `build-dependencies` section
 //!
 //! You can update `Cargo.toml` on your own.
 //!
@@ -51,7 +51,7 @@
 //! cargo add --build chksum-build
 //! ```
 //!
-//! ### Add `dependencies` entry
+//! ### Modify `dependencies` section
 //!
 //! As in the example above you can add entry manually.
 //!
