@@ -42,7 +42,7 @@
 //! ```toml
 //! [build-dependencies]
 //! # ...
-//! chksum-build = "0.0.1"
+//! chksum-build = "0.0.2"
 //! ```
 //!
 //! Or use [`cargo add`](https://doc.rust-lang.org/cargo/commands/cargo-add.html) subcommand.
@@ -58,7 +58,7 @@
 //! ```toml
 //! [dependencies]
 //! # ...
-//! chksum-build = "0.0.1"
+//! chksum-build = "0.0.2"
 //! ```
 //!
 //! Or by using subcommand.
