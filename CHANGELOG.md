@@ -7,9 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added *unsafe forbidden* badge.
+- Added *MSRV* badge.
+
 ### Changed
 
 - Disabled code coverage for internal `info` module.
+- Added logos to README badges.
+- Changed comments in TOML code examples.
+- Changed documentation headers.
 
 ### Fixed
 
