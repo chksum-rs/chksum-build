@@ -33,7 +33,7 @@ fn main() -> Result<()> {
 
 ### Update `Cargo.toml`
 
-#### Add `package.build` entry
+#### Modify `package` section
 
 ```toml
 [package]
@@ -41,7 +41,7 @@ fn main() -> Result<()> {
 build = "build.rs"
 ```
 
-#### Add `build-dependencies` entry
+#### Modify `build-dependencies` section
 
 You can update `Cargo.toml` on your own.
 
@@ -57,7 +57,7 @@ Or use [`cargo add`](https://doc.rust-lang.org/cargo/commands/cargo-add.html) su
 cargo add --build chksum-build
 ```
 
-#### Add `dependencies` entry
+#### Modify `dependencies` section
 
 As in the example above you can add entry manually.
 

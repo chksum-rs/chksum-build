@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added logos to README badges.
 - Changed comments in TOML code examples.
 - Changed documentation headers.
+- Changed README headers.
 
 ### Fixed
 
