@@ -8,7 +8,7 @@ use chrono::Local;
 
 use crate::cargo::Profile;
 use crate::error::Result;
-use crate::rust::Toolchain;
+use crate::rust::{Channel, Toolchain};
 
 /// Wraps [`BuildScript::setup`] to return [`anyhow::Result`] instead of [`Result`].
 ///
@@ -104,7 +104,10 @@ impl BuildScript {
             let toolchain = env::var("RUSTUP_TOOLCHAIN")?;
             Toolchain::from_str(&toolchain)?
         };
-        let channel = toolchain.channel;
+        let channel = match toolchain.channel {
+            Channel::Version(_) => Channel::Stable,
+            channel => channel,
+        };
 
         writeln!(stdout, "cargo:rustc-cfg={channel}")?;
         writeln!(stdout, "cargo:rustc-env=CHKSUM_BUILD_INFO_RUST_CHANNEL={channel}")?;
