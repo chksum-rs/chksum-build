@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Changed `cargo:rust-env` to use quotes.
+- Changed years range in license file.
 
 ### Fixed
 
