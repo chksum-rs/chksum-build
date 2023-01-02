@@ -8,7 +8,7 @@ use chrono::Local;
 
 use crate::cargo::Profile;
 use crate::error::Result;
-use crate::rust::Toolchain;
+use crate::rust::{Channel, Toolchain};
 
 /// Wraps [`BuildScript::setup`] to return [`anyhow::Result`] instead of [`Result`].
 ///
@@ -76,7 +76,10 @@ impl BuildScript {
     {
         let datetime = Local::now().format("%Y-%m-%d %H:%M:%S");
 
-        writeln!(stdout, "cargo:rustc-env=CHKSUM_BUILD_INFO_BUILD_DATETIME={datetime}")?;
+        writeln!(
+            stdout,
+            "cargo:rustc-env=CHKSUM_BUILD_INFO_BUILD_DATETIME=\"{datetime}\""
+        )?;
 
         Ok(())
     }
@@ -91,7 +94,7 @@ impl BuildScript {
         };
 
         writeln!(stdout, "cargo:rustc-cfg={profile}")?;
-        writeln!(stdout, "cargo:rustc-env=CHKSUM_BUILD_INFO_CARGO_PROFILE={profile}")?;
+        writeln!(stdout, "cargo:rustc-env=CHKSUM_BUILD_INFO_CARGO_PROFILE=\"{profile}\"")?;
 
         Ok(())
     }
@@ -104,10 +107,13 @@ impl BuildScript {
             let toolchain = env::var("RUSTUP_TOOLCHAIN")?;
             Toolchain::from_str(&toolchain)?
         };
-        let channel = toolchain.channel;
+        let channel = match toolchain.channel {
+            Channel::Version(_) => Channel::Stable,
+            channel => channel,
+        };
 
         writeln!(stdout, "cargo:rustc-cfg={channel}")?;
-        writeln!(stdout, "cargo:rustc-env=CHKSUM_BUILD_INFO_RUST_CHANNEL={channel}")?;
+        writeln!(stdout, "cargo:rustc-env=CHKSUM_BUILD_INFO_RUST_CHANNEL=\"{channel}\"")?;
 
         Ok(())
     }
@@ -124,7 +130,7 @@ mod tests {
         assert_eq!(
             stdout.to_string(),
             format!(
-                "cargo:rustc-env=CHKSUM_BUILD_INFO_BUILD_DATETIME={}\n",
+                "cargo:rustc-env=CHKSUM_BUILD_INFO_BUILD_DATETIME=\"{}\"\n",
                 Local::now().format("%Y-%m-%d %H:%M:%S")
             )
         );
@@ -138,7 +144,7 @@ mod tests {
         assert!(BuildScript::default().setup_cargo(&mut stdout).is_ok());
         assert_eq!(
             stdout.to_string(),
-            "cargo:rustc-cfg=release\ncargo:rustc-env=CHKSUM_BUILD_INFO_CARGO_PROFILE=release\n"
+            "cargo:rustc-cfg=release\ncargo:rustc-env=CHKSUM_BUILD_INFO_CARGO_PROFILE=\"release\"\n"
         );
     }
 
@@ -150,7 +156,7 @@ mod tests {
         assert!(BuildScript::default().setup_rust(&mut stdout).is_ok());
         assert_eq!(
             stdout.to_string(),
-            "cargo:rustc-cfg=nightly\ncargo:rustc-env=CHKSUM_BUILD_INFO_RUST_CHANNEL=nightly\n"
+            "cargo:rustc-cfg=nightly\ncargo:rustc-env=CHKSUM_BUILD_INFO_RUST_CHANNEL=\"nightly\"\n"
         );
     }
 }
